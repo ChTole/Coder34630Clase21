@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+        
+<h1>Vista de Cursos</h1>
+
+<h4>Estos son los cursos que tenemos!</h4>
+
+
+<ul>
+    {% for curso in lista_cursos %}
+        <li>{{curso.nombre}} - {{curso.camada}}</li>
+    {% endfor %}
+</ul>
+
+<a href="{%  url 'CursoFormulario' %}">Agregar curso</a>
+
+{% endblock contenidoQueCambia %}
